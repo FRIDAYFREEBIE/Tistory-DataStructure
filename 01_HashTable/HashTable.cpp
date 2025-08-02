@@ -45,6 +45,7 @@ void insert(const string& key, int value){
   hashTable[index] = new HashItem{key, value};
 }
 
+// 탐색 함수
 int get(const string& key){
   int index = hashFunction(key);
   
