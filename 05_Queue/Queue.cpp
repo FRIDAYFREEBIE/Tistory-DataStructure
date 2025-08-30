@@ -56,6 +56,11 @@ public:
     return front;
   }
 
+  // 비어 있는지 확인
+  bool isEmpty(){
+    return front == nullptr && rear == nullptr;
+  }
+
   // 전체 출력
   void display(){
     Node* temp = front;
