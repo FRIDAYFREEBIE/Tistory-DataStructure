@@ -45,7 +45,6 @@ public:
     Node* temp = front;
     front = front->previous;
 
-
     if(front == nullptr) rear = nullptr;
 
     delete temp;
@@ -68,20 +67,20 @@ public:
       cout << temp->data << " ";
       temp = temp->previous;
     }
-    cout << endl;
+    cout << "\n";
   }
 };
 
 int main() {
   Queue queue;
 
-  cout << "삽입 연산" << endl;
+  cout << "삽입 연산" << "\n";
   queue.Enqueue(10);
   queue.Enqueue(20);
   queue.Enqueue(30);
   queue.display();   // 10 20 30
 
-  cout << "삭제 연산" << endl;
+  cout << "삭제 연산" << "\n";
   queue.Dequeue();
   queue.display();   // 20 30
 
