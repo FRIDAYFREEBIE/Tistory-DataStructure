@@ -58,14 +58,14 @@ public:
   void Inorder(TreeNode* node){
     // 재귀
     if(node->GetLeftChild() != nullptr){
-      Preorder(node->GetLeftChild());
+      Inorder(node->GetLeftChild());
     }
 
     cout << node->getData() << " ";
 
     // 재귀
     if(node->GetRightChild() != nullptr){
-      Preorder(node->GetRightChild());
+      Inorder(node->GetRightChild());
     }
   }
 
@@ -73,10 +73,10 @@ public:
   void Postorder(TreeNode* node){
     // 재귀
     if(node->GetLeftChild() != nullptr){
-      Preorder(node->GetLeftChild());
+      Postorder(node->GetLeftChild());
     }
     if(node->GetRightChild() != nullptr){
-      Preorder(node->GetRightChild());
+      Postorder(node->GetRightChild());
     }
     
     cout << node->getData() << " ";
