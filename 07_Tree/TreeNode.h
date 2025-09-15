@@ -4,9 +4,9 @@ using namespace std;
 
 class TreeNode{
 private:
-  int data;         // µ¥ÀÌÅÍ
-  TreeNode* right;  // ¿À¸¥ÂÊ ÀÚ½Ä ³ëµå
-  TreeNode* left;   // ¿ÞÂÊ ÀÚ½Ä ³ëµå
+  int data;         // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  TreeNode* right;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½
+  TreeNode* left;   // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½
 
 public:
   TreeNode(int value){
@@ -15,28 +15,32 @@ public:
     right = nullptr;
   }
 
-  // ¿ÞÂÊ ÀÚ½Ä ³ëµå ¹ÝÈ¯
+  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
   TreeNode* GetLeftChild(){
     return left;
   }
 
-  // ¿À¸¥ÂÊ ÀÚ½Ä ³ëµå ¹ÝÈ¯
+  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
   TreeNode* GetRightChild(){
     return right;
   }
 
-  // ¿ÞÂÊ ÀÚ½Ä ³ëµå ¼³Á¤
+  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
   void SetLeftChild(TreeNode* child){
     left = child;
   }
 
-  // ¿À¸¥ÂÊ ÀÚ½Ä ³ëµå ¼³Á¤
+  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
   void SetRightChild(TreeNode* child){
     right = child;
   }
 
-  // µ¥ÀÌÅÍ ¹ÝÈ¯
+  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
   int getData(){
     return data;
+  }
+
+  void setData(int d){
+    data = d;
   }
 };
