@@ -67,7 +67,7 @@ private:
     return rotateLeft(node);
   }
 
-  // ===== 삽입 =====
+  // 삽입
   TreeNode* insertNode(TreeNode* node, int value){
     if(node == nullptr) return new TreeNode(value);
     
