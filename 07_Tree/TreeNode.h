@@ -4,43 +4,27 @@ using namespace std;
 
 class TreeNode{
 private:
-  int data;         // ������
-  TreeNode* right;  // ������ �ڽ� ���
-  TreeNode* left;   // ���� �ڽ� ���
+  int data;         // 데이터
+  int height;       // 높이
+  TreeNode* right;  // 오른쪽 노드
+  TreeNode* left;   // 왼쪽 노드
 
 public:
   TreeNode(int value){
     data = value;
+    height = 1;
     left = nullptr;
     right = nullptr;
   }
 
-  // ���� �ڽ� ��� ��ȯ
-  TreeNode* GetLeftChild(){
-    return left;
-  }
+  int getData() { return data; }
+  void setData(int d) { data = d; }
 
-  // ������ �ڽ� ��� ��ȯ
-  TreeNode* GetRightChild(){
-    return right;
-  }
+  TreeNode* GetLeftChild() { return left; }
+  TreeNode* GetRightChild() { return right; }
+  void SetLeftChild(TreeNode* child) { left = child; }
+  void SetRightChild(TreeNode* child) { right = child; }
 
-  // ���� �ڽ� ��� ����
-  void SetLeftChild(TreeNode* child){
-    left = child;
-  }
-
-  // ������ �ڽ� ��� ����
-  void SetRightChild(TreeNode* child){
-    right = child;
-  }
-
-  // ������ ��ȯ
-  int getData(){
-    return data;
-  }
-
-  void setData(int d){
-    data = d;
-  }
+  int getHeight() { return height; }
+  void setHeight(int h) { height = h; }
 };
