@@ -6,14 +6,14 @@ using namespace std;
 
 class BinaryTree{
 private:
-  TreeNode* root; // ·çÆ® ³ëµå
+  TreeNode* root; // ï¿½ï¿½Æ® ï¿½ï¿½ï¿½
 
 public:
   BinaryTree(TreeNode* r){
     root = r;
   }
 
-  // ³ëµå µ¿Àû Ãß°¡
+  // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
   void AddNode(TreeNode* node){
     queue<TreeNode*> treeQueue;
     treeQueue.push(root);
@@ -37,7 +37,7 @@ public:
     }
   }
 
-  // Æ®¸® Ãâ·Â
+  // Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½
   void Display(){
     queue<TreeNode*> treeQueue;
     treeQueue.push(root);
