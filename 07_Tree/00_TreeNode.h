@@ -1,3 +1,6 @@
+// FRIDAYFREEBIE 티스토리 - 자료구조 포스팅 자료
+// 트리 노드 헤더
+
 #include <iostream>
 
 using namespace std;

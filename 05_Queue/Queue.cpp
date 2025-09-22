@@ -1,10 +1,14 @@
+// FRIDAYFREEBIE М▀╟Л┼╓М├═К╕╛ - Л·░Кё▄Й╣╛Л║╟ М▐╛Л┼╓М▄┘ Л·░Кё▄
+// М│░ М│╢К·≤Л┼╓
+
 #include <iostream>
+
 using namespace std;
 
 class Node {
 public:
-  int data;       // ╣╔юлем ╟╙
-  Node* previous; // юлюЭ ЁК╣Е╦╕ фВюнем (е╔юг ╢ыю╫ ЁК╣Е)
+  int data;       // О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫
+  Node* previous; // О©╫О©╫О©╫О©╫ О©╫О©╫Е╦╕ О©╫О©╫О©╫О©╫О©╫О©╫ (е╔О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫)
 
   Node(int d) {
     data = d;
@@ -12,18 +16,18 @@ public:
   }
 };
 
-// ©╛╟А ╦╝╫╨ф╝ ╠Б╧щ е╔
+// О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ф╝ О©╫О©╫О©╫ е╔
 class Queue {
 public:
-  Node* rear;   // е╔юг ╦╤аЖ╦╥ ЁК╣Е (enqueue)
-  Node* front;  // е╔юг ц╧ ╧Ьб╟ ЁК╣Е (dequeue)
+  Node* rear;   // е╔О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ (enqueue)
+  Node* front;  // е╔О©╫О©╫ ц╧ О©╫О©╫б╟ О©╫О©╫О©╫ (dequeue)
 
   Queue(){
     rear = nullptr;
     front = nullptr;
   }
 
-  // ╣╔юлем ╩Пют (╣з©║╪╜)
+  // О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ (О©╫з©О©╫О©╫О©╫)
   void Enqueue(int item){
     Node* newNode = new Node(item);
 
@@ -38,7 +42,7 @@ public:
     }
   }
 
-  // ╣╔юлем ╩Ха╕ (╬у©║╪╜)
+  // О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ (О©╫у©О©╫О©╫О©╫)
   void Dequeue(){
     if(front == nullptr) return;
 
@@ -50,17 +54,17 @@ public:
     delete temp;
   }
 
-  // front ╟╙ю╩ ╧щх╞
+  // front О©╫О©╫О©╫О©╫ О©╫О©╫х╞
   Node* Peek(){
     return front;
   }
 
-  // ╨Я╬Н юж╢баЖ х╝юн
+  // О©╫О©╫О©╫ О©╫ж╢О©╫О©╫О©╫ х╝О©╫О©╫
   bool isEmpty(){
     return front == nullptr && rear == nullptr;
   }
 
-  // юЭц╪ цБ╥б
+  // О©╫О©╫ц╪ О©╫О©╫О©╫
   void display(){
     Node* temp = front;
     while(temp != nullptr){
@@ -74,13 +78,13 @@ public:
 int main() {
   Queue queue;
 
-  cout << "╩Пют ©╛╩Й" << "\n";
+  cout << "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫" << "\n";
   queue.Enqueue(10);
   queue.Enqueue(20);
   queue.Enqueue(30);
   queue.display();   // 10 20 30
 
-  cout << "╩Ха╕ ©╛╩Й" << "\n";
+  cout << "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫" << "\n";
   queue.Dequeue();
   queue.display();   // 20 30
 

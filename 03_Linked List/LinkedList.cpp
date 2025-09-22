@@ -1,3 +1,6 @@
+// FRIDAYFREEBIE 티스토리 - 자료구조 포스팅 자료
+// 연결리스트 클래스
+
 #include <iostream>
 
 using namespace std;

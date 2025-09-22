@@ -1,64 +1,67 @@
+// FRIDAYFREEBIE í‹°ìŠ¤í† ë¦¬ - ìë£Œêµ¬ì¡° í¬ìŠ¤íŒ… ìë£Œ
+// ë™ì  ë°°ì—´ í´ë˜ìŠ¨
+
 #include <iostream>
 
 using namespace std;
 
 class DynamicArray{
   private:
-    int* data;  // ¹è¿­ Æ÷ÀÎÅÍ
-    int size;   // ¿ë·®
-    int length; // ¿ä¼Ò °¹¼ö
+    int* data;  // ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    int size;   // ï¿½ë·®
+    int length; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    // ¿ë·®À» 2¹è·Î ´Ã¸®´Â ÇÔ¼ö
+    // ï¿½ë·®ï¿½ï¿½ 2ï¿½ï¿½ï¿½ ï¿½Ã¸ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     void resize(){
-      cout << "resize() È£Ãâ" << "\n";
+      cout << "resize() È£ï¿½ï¿½" << "\n";
 
-      // »õ·Î¿î ¹è¿­ »ı¼º
+      // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½
       int newSize = size * 2;
       int* newData = new int[newSize];
       
-      // ±âÁ¸ ¿ä¼Ò º¹»ç
+      // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
       for(int i = 0; i < length; i++){
         newData[i] = data[i];
       }
       
-      // ±âÁ¸ ¹è¿­ »èÁ¦
+      // ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½
       delete[] data;
       
-      // »õ ¹è¿­ ÇÒ´ç
+      // ï¿½ï¿½ ï¿½è¿­ ï¿½Ò´ï¿½
       data = newData;
       size = newSize;
     }
 
   public:
-    // »ı¼ºÀÚ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     DynamicArray(){
       size = 2;
       length = 0;
       data = new int[size];
     }
 
-    // ¼Ò¸êÀÚ
+    // ï¿½Ò¸ï¿½ï¿½ï¿½
     ~DynamicArray(){
       delete[] data;
     }
     
-    // ¸Ç µÚ¿¡ µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÏ´Â ÇÔ¼ö
+    // ï¿½ï¿½ ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     void push_back(int value){
-      // ¿ë·® °Ë»ç
+      // ï¿½ë·® ï¿½Ë»ï¿½
       if(length == size)  resize();
-      // ¸Ç µÚ¿¡ µ¥ÀÌÅÍ Ãß°¡
+      // ï¿½ï¿½ ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
       data[length++] = value;
     }
     
-    // ÇØ´ç ÀÎµ¦½ºÀÇ °ªÀ» ¹İÈ¯ÇÏ´Â ÇÔ¼ö
+    // ï¿½Ø´ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     int get(int index) const{
-      // ¹üÀ§ °Ë»ç
-      if(index < 0 || index >= length) throw out_of_range("ÀÎµ¦½º°¡ ¹üÀ§ ¹ÛÀÓ");
+      // ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
+      if(index < 0 || index >= length) throw out_of_range("ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
       return data[index];
     }
 
-    // ¹è¿­ Å©±â ¹İÈ¯ ÇÔ¼ö
+    // ï¿½è¿­ Å©ï¿½ï¿½ ï¿½ï¿½È¯ ï¿½Ô¼ï¿½
     int getSize() const{
       return length;
     }
@@ -69,7 +72,7 @@ int main(){
 
   arr.push_back(1);
   arr.push_back(2);
-  arr.push_back(3); // ¿ë·® ÃÊ°ú·Î resize() È£Ãâ (±âº» ¿ë·®ÀÌ 2)
+  arr.push_back(3); // ï¿½ë·® ï¿½Ê°ï¿½ï¿½ï¿½ resize() È£ï¿½ï¿½ (ï¿½âº» ï¿½ë·®ï¿½ï¿½ 2)
   // arr[] = {1, 2, 3}
 
   for(int i = 0; i < arr.getSize(); i++){

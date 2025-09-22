@@ -1,3 +1,6 @@
+// FRIDAYFREEBIE 티스토리 - 자료구조 포스팅 자료
+// 트리 순회 클래스
+
 #include <iostream>
 #include <queue>
 #include "00_TreeNode.h"

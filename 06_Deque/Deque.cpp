@@ -1,12 +1,15 @@
+// FRIDAYFREEBIE М▀╟Л┼╓М├═К╕╛ - Л·░Кё▄Й╣╛Л║╟ М▐╛Л┼╓М▄┘ Л·░Кё▄
+// К█╠ М│╢К·≤Л┼╓
+
 #include <iostream>
 
 using namespace std;
 
 class Node{
 public:
-  int data;   // ╣╔юлем
-  Node* prev; // юлюЭ ЁК╣Е фВюнем (©╘╠Б╪╜╢б ╬убй ЁК╣Е фВюнем)
-  Node* next; // ╢ыю╫ ЁК╣Е фВюнем (©╘╠Б╪╜╢б ╣збй ЁК╣Е фВюнем)
+  int data;   // О©╫О©╫О©╫О©╫О©╫О©╫
+  Node* prev; // О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫Б╪╜О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫)
+  Node* next; // О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫Б╪╜О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫)
 
   Node(int d){
     data = d;
@@ -17,19 +20,19 @@ public:
 
 class Deque{
 public:
-  Node* front;  // ╦г ╬у ЁК╣Е
-  Node* back;   // ╦г ╣з ЁК╣Е
+  Node* front;  // О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫
+  Node* back;   // О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫
 
   Deque(){
     front = nullptr;
     back = nullptr;
   }
 
-  // ╬у©║╪╜ ╩Пют
+  // О©╫у©О©╫О©╫О©╫ О©╫О©╫О©╫О©╫
   void Push_Front(int val){
     Node* newNode = new Node(val);
 
-    // ╣╕юл ╨Я╬Нюжю╩ ╤╖
+    // О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫
     if(isEmpty()){
       front = newNode;
       back = newNode;
@@ -41,11 +44,11 @@ public:
     }
   }
 
-  // ╣з©║╪╜ ╩Пют
+  // О©╫з©О©╫О©╫О©╫ О©╫О©╫О©╫О©╫
   void Push_Back(int val){
     Node* newNode = new Node(val);
 
-    // ╣╕юл ╨Я╬Нюжю╩ ╤╖
+    // О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫
     if(isEmpty()){
       front = newNode;
       back = newNode;
@@ -57,7 +60,7 @@ public:
     }
   }
 
-  // ╬у©║╪╜ ╩Ха╕
+  // О©╫у©О©╫О©╫О©╫ О©╫О©╫О©╫О©╫
   void Pop_Front(){
     if(isEmpty()) return;
 
@@ -71,7 +74,7 @@ public:
     delete temp;
   }
 
-  // ╣з©║╪╜ ╩Ха╕
+  // О©╫з©О©╫О©╫О©╫ О©╫О©╫О©╫О©╫
   void Pop_Back(){
     if(isEmpty()) return;
     
@@ -85,26 +88,26 @@ public:
     delete temp;
   }
 
-  // front ╧щх╞
+  // front О©╫О©╫х╞
   int Front(){
     if(isEmpty()) return -1;
 
     return front->data;
   }
 
-  // back ╧щх╞
+  // back О©╫О©╫х╞
   int Back(){
     if(isEmpty()) return -1;
 
     return back->data;
   }
   
-  // ╨Я╬Нюж╢юаЖ х╝юн
+  // О©╫О©╫О©╫О©╫ж╢О©╫О©╫О©╫ х╝О©╫О©╫
   bool isEmpty(){
     return front == nullptr;
   }
 
-  // юЭц╪ цБ╥б (╬у©║╪╜╨нем)
+  // О©╫О©╫ц╪ О©╫О©╫О©╫ (О©╫у©О©╫О©╫О©╫О©╫О©╫О©╫О©╫)
   void display(){
     Node* temp = front;
     while(temp != nullptr){
@@ -119,20 +122,20 @@ public:
 int main(){
   Deque deque;
 
-  cout << "╩Пют ©╛╩Й (╬у)" << "\n";
+  cout << "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ (О©╫О©╫)" << "\n";
   deque.Push_Front(2);
   deque.Push_Front(1);
   deque.display(); // 1 2
 
-  cout << "╩Пют ©╛╩Й (╣з)" << "\n";
+  cout << "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ (О©╫О©╫)" << "\n";
   deque.Push_Back(3);
   deque.display(); // 1 2 3
 
-  cout << "╩Ха╕ ©╛╩Й (╬у)" << "\n";
+  cout << "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ (О©╫О©╫)" << "\n";
   deque.Pop_Front();
   deque.display(); // 2 3
 
-  cout << "╩Ха╕ ©╛╩Й (╣з)" << "\n";
+  cout << "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ (О©╫О©╫)" << "\n";
   deque.Pop_Back();
   deque.display(); // 2
 
