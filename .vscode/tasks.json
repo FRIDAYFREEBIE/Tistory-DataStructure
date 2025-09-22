@@ -1,35 +1,39 @@
 {
   "version": "2.0.0",
   "tasks": [
-      {
-          "label": "C++ 빌드",
-          "type": "cppbuild",
-          "command": "C:\\mingw64\\bin\\g++.exe",
-          "args": [
-              "-fdiagnostics-color=always",
-              "-g",
-              "${file}",
-              "-o",
-              "${fileDirname}\\${fileBasenameNoExtension}.exe"
-          ],
-          "group": {
-              "kind": "build",
-              "isDefault": true
-          },
-          "problemMatcher": [
-              "$gcc"
-          ],
-          "detail": "컴파일러: C:\\mingw64\\bin\\g++.exe"
+    {
+      "label": "C++ 전체 빌드",
+      "type": "shell",
+      "command": "C:\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${fileDirname}\\*.cpp",                   // 현재 폴더의 모든 cpp 파일 빌드
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe" // 현재 열려 있는 파일 이름 기반 exe
+      ],
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/c"]
+        }
       },
-      {
-          "label": "빌드파일 실행",
-          "type": "shell",
-          "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-          "group": {
-              "kind": "test",
-              "isDefault": true
-          },
-          "problemMatcher": []
-      }
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "컴파일러: C:\\mingw64\\bin\\g++.exe"
+    },
+    {
+      "label": "빌드파일 실행",
+      "type": "shell",
+      "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
   ]
 }
