@@ -5,23 +5,19 @@
 #include "02_GraphList.h"
 
 int main(){
-  std::cout<< "\n" << "=== Matrix ===" << "\n";
-  GraphMatrix gm(5);
+  GraphMatrix gm(6);
+
   gm.addEdge(0, 1);
-  gm.addEdge(0, 4);
-  gm.addEdge(1, 2);
+  gm.addEdge(0, 2);
   gm.addEdge(1, 3);
   gm.addEdge(1, 4);
+  gm.addEdge(1, 5);
+
+  std::cout<< "\n" << "=== Matrix ===" << "\n";
   gm.print();
 
-  std::cout << "\n" << "=== List ===\n";
-  GraphList gl(5);
-  gl.addEdge(0, 1);
-  gl.addEdge(0, 4);
-  gl.addEdge(1, 2);
-  gl.addEdge(1, 3);
-  gl.addEdge(1, 4);
-  gl.print();
+  std::cout<< "\n" << "==== BFS ====" << "\n";
+  gm.BFS(0);
 
   return 0;
 }

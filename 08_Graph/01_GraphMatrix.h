@@ -5,6 +5,7 @@
 
 #include<vector>
 #include<iostream>
+#include <queue>
 
 class GraphMatrix{
 private:
@@ -16,4 +17,6 @@ public:
   
   void addEdge(int _u, int _v, bool directed = false);  // 간선 추가
   void print();                                         // 프린트
+
+  void BFS(int start);                                  // 너비 우선 탐색
 };
