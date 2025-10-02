@@ -55,3 +55,23 @@ void GraphMatrix::BFS(int start){
 
   std::cout << "\n";
 }
+
+// DFS 재귀 유틸
+void GraphMatrix::DFSUtil(int node, std::vector<bool>& visited) {
+  visited[node] = true;
+  std::cout << node << " ";
+
+  for (int i = 0; i < v; i++) {
+    if (adj[node][i] == 1 && !visited[i]) {
+      DFSUtil(i, visited);
+    }
+  }
+}
+
+// DFS 탐색
+void GraphMatrix::DFS(int start){
+  std::vector<bool> visited(v, false);
+
+  DFSUtil(start, visited);
+  std::cout << "\n";
+}

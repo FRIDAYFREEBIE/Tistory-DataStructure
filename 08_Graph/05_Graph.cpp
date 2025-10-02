@@ -8,16 +8,16 @@ int main(){
   GraphMatrix gm(6);
 
   gm.addEdge(0, 1);
-  gm.addEdge(0, 2);
+  gm.addEdge(0, 4);
+  gm.addEdge(1, 2);
   gm.addEdge(1, 3);
-  gm.addEdge(1, 4);
-  gm.addEdge(1, 5);
+  gm.addEdge(4, 5);
 
   std::cout<< "\n" << "=== Matrix ===" << "\n";
   gm.print();
 
-  std::cout<< "\n" << "==== BFS ====" << "\n";
-  gm.BFS(0);
+  std::cout<< "\n" << "==== DFS ====" << "\n";
+  gm.DFS(0);
 
   return 0;
 }
